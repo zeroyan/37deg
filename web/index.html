@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>免费制订保险计划</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/amazeui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 class="header-title">欢迎来到37度保!
+                <a class="header-phone" href="tel://010-66666666">
+                    <img src="images/circle_phone.png" />
+                </a>
+            </h2>
+        </header>
+        <section>
+            <div class="section-enter">
+                <div class="section-enter-des">
+                    <h4>家庭综合保障测评</h4>
+                    <span>我爱我的家,</span>
+                    <span>爸妈，孩子,</span>
+                    <span>还有我亲爱的他.</span>
+                    <button id="enter_test_btn" type="button" class="btn btn-danger">点击进入测评</button>
+                </div>
+
+            </div>
+            <div class="section-btns">
+                <img src="images/index_btns.jpg">
+            </div>
+
+        </section>
+        <br/>
+        <footer class="index-footer">
+            <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+            独立第三方平台，请放心使用
+        </footer>
+    </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script>
+    $(function() {
+        $("#enter_test_btn").click(function(){
+            location.href = 'input.html'
+        })
+    })
+</script>
+</body>
+</html>

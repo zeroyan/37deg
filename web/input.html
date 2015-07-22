@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>37度保</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/amazeui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+    <div class="container">
+        <form class="app-form">
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">你的性别</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_age" id="male"> 男
+                        </label>
+                        <label class="am-btn am-btn-default am-active">
+                            <input type="radio" name="user_age" id="famale"> 女
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">是否有未成年子女</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_is18" id="y_18" value=1>有
+                        </label>
+                        <label class="am-btn am-btn-default am-active">
+                            <input type="radio" name="user_child_is18" id="n_18" value=0>无
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g form-group" style="display: none">
+                <div class="am-u-sm-7">请选择数量</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr app-radio-other" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_num">
+                        </label>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_num">
+                        </label>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_num">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g form-group" style="display: none">
+                <div class="am-u-sm-7">子女性别</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_gender">男
+                        </label>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_child_gender">女
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div id="user_child_gender_modal" class="modal-overlay">-->
+                <!--<div class="modal-data">-->
+                    <!--<div class="am-g">-->
+                        <!--<div class="am-u-sm-10">子女性别</div>-->
+                        <!--<div class="am-u-sm-2">-->
+                            <!--<span class="am-icon-times am-icon-sm" onclick="overlay('user_child_gender_modal')"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<hr/>-->
+
+                    <!--<div>-->
+                        <!--<div class="am-g form-group">-->
+                            <!--<div class="am-u-sm-7">子女1</div>-->
+                            <!--<div class="am-u-sm-5">-->
+                                <!--<div id="app-form-radio" class="am-btn-group am-fr" data-am-button>-->
+                                    <!--<label class="am-btn am-btn-default">-->
+                                        <!--<input type="radio" name="user_child_gender">男-->
+                                    <!--</label>-->
+                                    <!--<label class="am-btn am-btn-default">-->
+                                        <!--<input type="radio" name="user_child_gender">女-->
+                                    <!--</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="am-g form-group">-->
+                            <!--<div class="am-u-sm-7">子女2</div>-->
+                            <!--<div class="am-u-sm-5">-->
+                                <!--<div id="app-form-radio" class="am-btn-group am-fr" data-am-button>-->
+                                    <!--<label class="am-btn am-btn-default">-->
+                                        <!--<input type="radio" name="user_child_gender">男-->
+                                    <!--</label>-->
+                                    <!--<label class="am-btn am-btn-default">-->
+                                        <!--<input type="radio" name="user_child_gender">女-->
+                                    <!--</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+
+                    <!--<span class="am-icon-plus am-icon-sm app-add-child">添加未成年子女</span>-->
+
+                    <!--<button type="button" class="am-btn app-modal-btn">清除</button>-->
+                    <!--<button type="button" class="am-btn app-modal-btn am-fr">确定</button>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">家人年龄</div>
+                <div class="am-u-sm-5 app-form-points" id="user_family_age">
+                    <span onclick="overlay('user_family_age_modal')">…</span>
+                </div>
+            </div>
+
+            <div id="user_family_age_modal" class="modal-overlay">
+                <div class="modal-data">
+                        <div class="am-g">
+                            <div class="am-u-sm-10">家人年龄</div>
+                            <div class="am-u-sm-2">
+                                <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_age_modal')"></span>
+                            </div>
+                        </div>
+                        <hr/>
+                        <p>年龄计算以周岁为准</p>
+                        <div>
+                            <div class="am-g form-group">
+                                <div class="am-u-sm-6">你的年龄</div>
+                                <div class="am-u-sm-6">
+                                    <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                        <input type="number" name="user_family_age">岁
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="am-g form-group">
+                                <div class="am-u-sm-6">配偶的年龄</div>
+                                <div class="am-u-sm-6">
+                                    <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                        <input type="number" name="user_family_age">岁
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <button type="button" class="am-btn app-modal-btn">清除</button>
+                    <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
+
+                </div>
+            </div>
+
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">家人年收入</div>
+                <div class="am-u-sm-5 app-form-points" id="user_family_income">
+                    <span onclick="overlay('user_family_income_modal')">…</span>
+                </div>
+            </div>
+
+            <div id="user_family_income_modal" class="modal-overlay">
+                <div class="modal-data">
+                    <div class="am-g">
+                        <div class="am-u-sm-10">家人年收入</div>
+                        <div class="am-u-sm-2">
+                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_income_modal')"></span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">你的年收入</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_income">元
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">配偶的年收入</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_income">元
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="am-btn app-modal-btn">清除</button>
+                    <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
+
+                </div>
+            </div>
+
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">家庭支出</div>
+                <div class="am-u-sm-5 app-form-points" id="user_family_pay">
+                    <span>…</span>
+                </div>
+            </div>
+
+            <div id="user_family_income_modal" class="modal-overlay">
+                <div class="modal-data">
+                    <div class="am-g">
+                        <div class="am-u-sm-10">家人年收入</div>
+                        <div class="am-u-sm-2">
+                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_income_modal')"></span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div>
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">你的年收入</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_income">元
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">配偶的年收入</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_income">元
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="am-btn app-modal-btn">清除</button>
+                    <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
+
+                </div>
+            </div>
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">现有保障</div>
+                <div class="am-u-sm-5 app-form-points" id="user_family_insurance">
+                    <span>…</span>
+                </div>
+            </div>
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">是否有负债</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="user_has_paycheck" value=1>是
+                        </label>
+                        <label class="am-btn am-btn-default am-active">
+                            <input type="radio" name="user_has_paycheck" value=0>否
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g form-group" style="display: none">
+                <div class="am-u-sm-7">债务情况</div>
+                <div class="am-u-sm-5 app-form-points" id="user_paycheck_info">
+                    <span>…</span>
+                </div>
+            </div>
+
+            <div class="am-g form-group">
+                <div class="am-u-sm-7">需要赡养父母吗</div>
+                <div class="am-u-sm-5">
+                    <div id="app-form-radio" class="am-btn-group am-fr" data-am-button>
+                        <label class="am-btn am-btn-default">
+                            <input type="radio" name="need_support_parents" value=1>是
+                        </label>
+                        <label class="am-btn am-btn-default am-active">
+                            <input type="radio" name="need_support_parents" value=0>否
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g form-group" style="display: none">
+                <div class="am-u-sm-7">赡养情况</div>
+                <div class="am-u-sm-5 app-form-points" id="support_parents_info">
+                    <span>…</span>
+                </div>
+            </div>
+
+            <div class="am-g form-group" style="display: none">
+                <div class="am-u-sm-7">父母保障情况</div>
+                <div class="am-u-sm-5 app-form-points" id="parents_insurance_info">
+                    <span>…</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: center;border:0">
+                <button type="button" class="am-btn am-round app-btn-pink">确&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp定</button>
+            </div>
+        </form>
+    </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
