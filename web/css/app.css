@@ -178,18 +178,20 @@ body{
 .res-article{
     padding: 0 .5rem;
 }
-.res-article>ul:first-child{
+.res-article>ul:first-child, .modal-data .form-group ul{
     text-align: center;
     margin: 1.5rem auto;
 }
-.res-article>ul:first-child button{
+.res-article>ul:first-child button, .modal-data .form-group ul button{
     background-color: #FFFFFF;
     color: #CCCCCC;
     border: solid 1px #CCCCCC;
     border-radius: 10px;
     width: 90%;
+    margin: 1rem 0;
+    padding: .5em 0em;
 }
-.res-article>ul:first-child .app-btn-active{
+.res-article>ul:first-child .app-btn-active, .modal-data .form-group ul .app-btn-active{
     background-color: rgba(252,137,161,1);
     color: #FFFFFF;
 }

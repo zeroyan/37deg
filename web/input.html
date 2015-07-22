@@ -141,26 +141,26 @@
                         </div>
                         <hr/>
                         <p>年龄计算以周岁为准</p>
-                        <div>
-                            <div class="am-g form-group">
-                                <div class="am-u-sm-6">你的年龄</div>
-                                <div class="am-u-sm-6">
-                                    <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                        <input type="number" name="user_family_age">岁
-                                    </div>
+
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">你的年龄</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_age">岁
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="am-g form-group">
-                                <div class="am-u-sm-6">配偶的年龄</div>
-                                <div class="am-u-sm-6">
-                                    <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                        <input type="number" name="user_family_age">岁
-                                    </div>
+
+
+                        <div class="am-g form-group">
+                            <div class="am-u-sm-6">配偶的年龄</div>
+                            <div class="am-u-sm-6">
+                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                    <input type="number" name="user_family_age">岁
                                 </div>
                             </div>
                         </div>
+
                     <button type="button" class="am-btn app-modal-btn">清除</button>
                     <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
 
@@ -184,26 +184,25 @@
                         </div>
                     </div>
                     <hr/>
-                    <div>
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">你的年收入</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_income">元
-                                </div>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">你的年收入</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_income">元
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">配偶的年收入</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_income">元
-                                </div>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">配偶的年收入</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_income">元
                             </div>
                         </div>
                     </div>
+
                     <button type="button" class="am-btn app-modal-btn">清除</button>
                     <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
 
@@ -214,39 +213,39 @@
             <div class="am-g form-group">
                 <div class="am-u-sm-7">家庭支出</div>
                 <div class="am-u-sm-5 app-form-points" id="user_family_pay">
-                    <span>…</span>
+                    <span onclick="overlay('user_family_pay_modal')">…</span>
                 </div>
             </div>
 
-            <div id="user_family_income_modal" class="modal-overlay">
+            <div id="user_family_pay_modal" class="modal-overlay">
                 <div class="modal-data">
                     <div class="am-g">
-                        <div class="am-u-sm-10">家人年收入</div>
+                        <div class="am-u-sm-10">家庭支出</div>
                         <div class="am-u-sm-2">
-                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_income_modal')"></span>
+                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_pay_modal')"></span>
                         </div>
                     </div>
                     <hr/>
-                    <div>
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">你的年收入</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_income">元
-                                </div>
+                    <p>基本生活支出</p>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">你的月支出</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_pay">元
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">配偶的年收入</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_income">元
-                                </div>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">配偶的岳指出</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_pay">元
                             </div>
                         </div>
                     </div>
+
                     <button type="button" class="am-btn app-modal-btn">清除</button>
                     <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
 
@@ -256,9 +255,37 @@
             <div class="am-g form-group">
                 <div class="am-u-sm-7">现有保障</div>
                 <div class="am-u-sm-5 app-form-points" id="user_family_insurance">
-                    <span>…</span>
+                    <span onclick="overlay('user_family_insurance_modal')">…</span>
                 </div>
             </div>
+
+            <div id="user_family_insurance_modal" class="modal-overlay">
+                <div class="modal-data">
+                    <div class="am-g">
+                        <div class="am-u-sm-10">现有保障</div>
+                        <div class="am-u-sm-2">
+                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_insurance_modal')"></span>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-12">你本人</div>
+                        <ul class="am-avg-sm-3 am-avg-md-4 am-avg-lg-6">
+                            <li><button type="button" class="am-btn app-btn-pink app-btn-active">社会医疗保险</button></li>
+                            <li><button type="button" class="am-btn app-btn-pink">商务保险</button></li>
+                            <li><button type="button" class="am-btn app-btn-pink">收起</button></li>
+                            <li><button type="button" class="am-btn app-btn-pink app-btn-active">社会医疗保险</button></li>
+                            <li><button type="button" class="am-btn app-btn-pink">商务保险</button></li>
+                            <li><button type="button" class="am-btn app-btn-pink">收起</button></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="am-btn app-modal-btn">清除</button>
+                    <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
+                </div>
+            </div>
+
 
             <div class="am-g form-group">
                 <div class="am-u-sm-7">是否有负债</div>
