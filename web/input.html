@@ -46,13 +46,16 @@
                 <div class="am-u-sm-5">
                     <div id="app-form-radio" class="am-btn-group am-fr app-radio-other" data-am-button>
                         <label class="am-btn am-btn-default">
-                            <input type="radio" name="user_child_num">
+                            <input type="checkbox" name="user_child_num" style="display: none">
+                            <span class="am-icon-user"></span>
                         </label>
                         <label class="am-btn am-btn-default">
-                            <input type="radio" name="user_child_num">
+                            <input type="checkbox" name="user_child_num" style="display: none">
+                            <span class="am-icon-user"></span>
                         </label>
                         <label class="am-btn am-btn-default">
-                            <input type="radio" name="user_child_num">
+                            <input type="checkbox" name="user_child_num" style="display: none">
+                            <span class="am-icon-user"></span>
                         </label>
                     </div>
                 </div>
@@ -133,34 +136,33 @@
 
             <div id="user_family_age_modal" class="modal-overlay">
                 <div class="modal-data">
-                        <div class="am-g">
-                            <div class="am-u-sm-10">家人年龄</div>
-                            <div class="am-u-sm-2">
-                                <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_age_modal')"></span>
+                    <div class="am-g">
+                        <div class="am-u-sm-10 modal-data-title">家人年龄</div>
+                        <div class="am-u-sm-2">
+                            <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_age_modal')"></span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <p>年龄计算以周岁为准</p>
+
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">你的年龄</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_age">岁
                             </div>
                         </div>
-                        <hr/>
-                        <p>年龄计算以周岁为准</p>
+                    </div>
 
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">你的年龄</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_age">岁
-                                </div>
+                    <div class="am-g form-group">
+                        <div class="am-u-sm-6">配偶的年龄</div>
+                        <div class="am-u-sm-6">
+                            <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
+                                <input type="number" name="user_family_age">岁
                             </div>
                         </div>
-
-
-                        <div class="am-g form-group">
-                            <div class="am-u-sm-6">配偶的年龄</div>
-                            <div class="am-u-sm-6">
-                                <div id="app-form-text" class="am-btn-group am-fr" data-am-button>
-                                    <input type="number" name="user_family_age">岁
-                                </div>
-                            </div>
-                        </div>
-
+                    </div>
+                    <br/>
                     <button type="button" class="am-btn app-modal-btn">清除</button>
                     <button type="button" class="am-btn app-modal-btn am-fr">确定</button>
 
@@ -178,7 +180,7 @@
             <div id="user_family_income_modal" class="modal-overlay">
                 <div class="modal-data">
                     <div class="am-g">
-                        <div class="am-u-sm-10">家人年收入</div>
+                        <div class="am-u-sm-10 modal-data-title">家人年收入</div>
                         <div class="am-u-sm-2">
                             <span class="am-icon-times am-icon-sm" onclick="overlay('user_family_income_modal')"></span>
                         </div>
