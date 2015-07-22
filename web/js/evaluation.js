@@ -2,6 +2,11 @@
  * Created by zeroyan on 15/7/21.
  */
 
+var overlay = function(modal_id){
+    var e1 = document.getElementById(modal_id);
+    e1.style.visibility =  (e1.style.visibility == "visible"  ) ? "hidden" : "visible";
+};
+
 var drawSector = function(id){
     var canvas = document.getElementById(id);
     if (canvas == null){
@@ -53,4 +58,24 @@ var drowImage = function(context, img){
 
 $(function(){
     drawSector("sector_diagram");
+
+    $("#consult").click(function(e){
+        e.stopPropagation();
+        var e1 = document.getElementById("consult_modal");
+        e1.style.visibility = "visible";
+        //alert("btn");
+    });
+    $("#consult_modal").click(function(e){
+        e.stopPropagation();
+        overlay("consult_modal");
+        //alert("big")
+    });
+    $(".am-icon-wechat").click(function(e){
+        e.stopPropagation();
+        alert("微信");
+    });
+    $(".am-icon-phone").click(function(e){
+        e.stopPropagation();
+        alert("电话");
+    });
 });
