@@ -63,7 +63,10 @@ body{
 .index-footer{
     text-align: center;
 }
-
+.index-footer span{
+    font-size: 1.3rem;
+    color: #8C8C8C;
+}
 .app-form{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -157,9 +160,16 @@ body{
     display: block;
     cursor: pointer;
 }
+#more_children .am-u-sm-5{
+    margin-top: 1.5rem;
+}
 .app-modal-btn{
     background-color: rgba(252,137,161,1);
     color: #FFFFFF;
+}
+.app-modal-btn:active,.app-modal-btn:focus{
+    color: #FFFFFF;
+    background-color: rgb(223,78,108);
 }
 #app-form-text input[type=number]{
     width:80%;
@@ -171,6 +181,13 @@ body{
 #app-form-text input[type=number]:focus{
     outline:medium;
 }
+#user_child_number .am-u-sm-5{
+    padding: .5rem 0;
+    padding-right: .7rem;
+}
+#user_child_number .am-u-sm-5 .am-btn{
+    font-size: 1.2rem;
+}
 .res-sector{
     text-align: center;
 }
@@ -181,11 +198,15 @@ body{
 .res-header{
     background-color: rgba(252,137,161,1);
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 2.6rem;
     text-align: center;
-    height: 2.8rem;
+    height: 4rem;
     padding: 0 5px;
 
+}
+.res-header>span{
+    position: relative;
+    top: 3px;
 }
 .res-header .am-icon-sm:before{
     font-size: 100%;
@@ -197,6 +218,9 @@ body{
 .res-article{
     padding: 0 .5rem;
 }
+.form-group .am-u-sm-12{
+    border-bottom: solid 1px #EAEAEA;
+}
 .res-article>ul:first-child, .modal-data .form-group ul{
     text-align: center;
     margin: 1.5rem auto;
@@ -207,7 +231,7 @@ body{
     border: solid 1px #CCCCCC;
     border-radius: 10px;
     width: 90%;
-    margin: 1rem 0;
+    margin: .5rem 0;
     padding: .5rem 0;
     font-size: 1.2rem;
 }
@@ -215,8 +239,15 @@ body{
     background-color: rgba(252,137,161,1);
     color: #FFFFFF;
 }
+#app-form-checkbox li>button>span{
+    color: rgba(252,137,161,1);
+}
+.res-article-analysis>ul{
+    background-color: #FFFFFF;
+}
 .res-article-analysis>section{
     margin: 1.5rem 0;
+    background-color: #FFFFFF;
 }
 .res-article-analysis>section>h2{
     font-size: 1.5rem;
@@ -256,7 +287,10 @@ body{
     height: 3.5rem;
     z-index: 999;
 }
-
+.res-article-analysis canvas{
+    width: 100%;
+    height: 200px;
+}
 @media screen and (min-width: 500px){
 
 .section-enter{
